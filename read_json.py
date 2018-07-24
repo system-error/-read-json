@@ -1,5 +1,5 @@
 import json
-file = open('reci.json','r')
+file = open('recipes.json','r')
 data = json.loads(file.read())
 
 splitted_data=[]
