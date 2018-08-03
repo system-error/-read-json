@@ -10,4 +10,5 @@ for i in data:
         if matching_eggs or matching_egg:
             string ="The recipie with id {} has eggs".format(i['id']) 
             print(string)
+            break
             
