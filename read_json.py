@@ -1,19 +1,13 @@
-import json
+import json,re
 file = open('recipes.json','r')
 data = json.loads(file.read())
 
-splitted_data=[]
+
 for i in data:
     for y in i['ingredients']:
-        if "eggs" in y or "egg" in y :
-            print('The recipie with id ', i['id'] , 'has eggs')
-
-# for datas in load_data:
-#     print(datas)
-
-
-# with open("reci.json","r") as json_file:
-#     data = json.load(json_file)
-#     print(data['id'])
-    
-    
+        matching_eggs = re.search(r'\beggs\b',y)
+        matching_egg = re.search(r'\begg\b',y)
+        if matching_eggs or matching_egg:
+            string ="The recipie with id {} has eggs".format(i['id']) 
+            print(string)
+            
