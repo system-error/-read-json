@@ -11,7 +11,7 @@ for i in data:
         if matching_eggs or matching_egg:
             string ="The recipie with id {} has eggs".format(i['id']) 
             print(string)
-            # all_data.append(str(string))
-            # output = open('log.txt','w')
-            # for recipies in all_data:
-            #     output.write(recipies + "\n")
+            all_data.append(str(string))
+            output = open('log.txt','w')
+            for recipies in all_data:
+                output.write(recipies + "\n")
